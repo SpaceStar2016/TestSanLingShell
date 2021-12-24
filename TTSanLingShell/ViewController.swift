@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         print("commit 001")
         print("commit 002")
         print("commit 003")
+        print("commit 004")
         // Do any additional setup after loading the view.
     }
 
