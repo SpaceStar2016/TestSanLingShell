@@ -22,7 +22,6 @@ DerivedData
 rnbundle/ReactNative_Bundle_Tmp/
 rnbundle/output/
 
-
 # Bundler
 .bundle
 
@@ -39,3 +38,11 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 Pods/
+
+ *.xcuserstate  
+project.xcworkspace  
+xcuserdata  
+UserInterfaceState.xcuserstate  
+project.xcworkspace/  
+xcuserdata/  
+UserInterface.xcuserstate
