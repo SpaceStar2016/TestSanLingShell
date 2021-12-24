@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Hellow world")
+        print("commit 000")
         // Do any additional setup after loading the view.
     }
 
