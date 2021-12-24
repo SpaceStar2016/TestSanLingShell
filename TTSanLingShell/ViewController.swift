@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         print("Hellow world")
         print("commit 000")
         print("commit 001")
+        print("commit 002")
         // Do any additional setup after loading the view.
     }
 
