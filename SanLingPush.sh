@@ -69,7 +69,10 @@ function mergeBranch(){
  
 if [[ $lastMessage =~ $noCommit ]]; then
     echo "无需提交"
-    exit
+else
+ git add .
+ git commit -m"auto push"
+ git push origin develop_SanLing
 fi
 
     # echo "🟡 git status:"
