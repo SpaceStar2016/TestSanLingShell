@@ -62,11 +62,36 @@ echo "targetBranch == $targetBranch"
 
 function mergeBranch(){
 
-    git status .
-    if [ ! $? -eq 0 ]; then
-        echoRed " ❌ 是否有修改"
-    fi
-    return 0
+    lastMessage=`git status | tail -n 2`
+    echo $lastMessage
+#nothing to commit, working tree clean 本地没有变化
+    noCommit='nothing to commit'
+ 
+if [[ $lastMessage =~ $noCommit ]]; then
+    echo "无需提交"
+    exit
+fi
+
+    # echo "🟡 git status:"
+	# statusret=$(git status .)
+    # echo $statusret
+
+    # lastMessage=`git status . | grep "On branch develop_SanLing Changes not staged for cssommi" `
+#nothing to commit, working tree clean 本地没有变化
+    # noCommit='nothing to commit'
+# if [ $? -eq 0 ]; then
+#     echoRed " ❌ 是否有修改"
+# fi
+# if [[ $lastMessage =~ $noCommit ]]; then
+#     echo "无需提交"
+#     exit
+# fi
+
+    # git status .
+    # if [ ! $? -eq 0 ]; then
+    #     echoRed " ❌ 是否有修改"
+    # fi
+    # return 0
     # # cur_dir=$(dirname $(pwd))
     # # cd "$cur_dir/$1"
     # # if [ ! $? -eq 0 ]; then
